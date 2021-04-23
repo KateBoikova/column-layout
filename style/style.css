@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --col-gutter: 30px;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6c7279;
+  line-height: 1.4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #2d3033;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.col {
+  text-align: center;
+  padding: 20px calc(var(--col-gutter) / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.col > p {
+  line-height: 22.4px;
+}
+
+@media screen and (min-width: 992px) {
+  .col-lg-4 {
+    flex-basis: calc(4 * 100% / 12);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .col-md-6 {
+    flex-basis: calc(6 * 100% / 12);
+  }
+}
+@media screen and (max-width: 768px) {
+    .col-sm-12 {
+    flex-basis: calc(12 * 100% / 12);
+  }
+}
+
